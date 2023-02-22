@@ -2,11 +2,11 @@
   <el-row class="input-row" justify="center">
     <el-col :span="8">
       <el-form label-width="auto" size="large">
-        <el-form-item label="ApiKey">
+        <!-- <el-form-item label="ApiKey">
           <el-input v-model="api_key" placeholder="add key here. 在这里输入秘钥" show-password type="password"></el-input>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item label="Prompt">
-          <el-input type="textarea" v-model="prompt" placeholder="Input text here. 在这里输入内容" rows="3"></el-input>
+          <el-input type="textarea" v-model="prompt" placeholder="请输入您的问题（请勿输入敏感或涉密信息进行测试）" rows="3"></el-input>
         </el-form-item>
       </el-form>
     </el-col>
@@ -133,9 +133,7 @@
   <el-row justify="center">
     <p class="footer-top">{{ pkgjson.name }} {{ pkgjson.version }}</p>
   </el-row>
-  <el-row justify="center">
-    <el-link class="footer-text" icon="Link" href="https://space.bilibili.com/34147682" target="_blank">created by Smile</el-link>
-  </el-row>
+ 
   <el-row justify="center">
     <p class="footer-text">免责声明：本页面开发目的仅用于学习和探索</p>
   </el-row>
@@ -283,7 +281,7 @@ export default {
       axios.post('https://api.openai.com/v1/completions', data, {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ` + this.api_key,
+          'Authorization': 'Bearer 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',
         }
       })
         .then(response => {

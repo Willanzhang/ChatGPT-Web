@@ -1,7 +1,7 @@
 <template>
       
-      <!-- <MainPage/> -->
-      <ByePage/>
+      <MainPage/>
+      <!-- <ByePage/> -->
 </template>
 
 <script>

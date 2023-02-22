@@ -6,10 +6,10 @@
                     <el-button size="large" type="primary" icon="Monitor" @click="jumpWeb" circle>
                     </el-button>
                 </el-col>
-                <el-col :span="16"><el-form label-width="auto" size="large">
+                <!-- <el-col :span="16"><el-form label-width="auto" size="large">
                         <el-input v-model="api_key" placeholder="add key here. 在这里输入秘钥" show-password
                             type="password"></el-input></el-form>
-                </el-col>
+                </el-col> -->
             </el-row>
         </el-header>
         <el-main>
@@ -47,7 +47,7 @@
             <el-row justify="end">
                 <el-col :span="22" style="margin-bottom:24px;">
                     <el-form label-width="auto" size="large">
-                        <el-input type="textarea" v-model="prompt" placeholder="Input text here. 在这里输入内容"
+                        <el-input type="textarea" v-model="prompt" placeholder="请输入您的问题（请勿输入敏感或涉密信息进行测试）"
                             rows="3"></el-input></el-form>
                 </el-col>
                 <el-col :span="2" justify="end">
@@ -122,7 +122,7 @@ export default {
             axios.post('https://api.openai.com/v1/completions', data, {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ` + this.api_key,
+                    'Authorization': 'Bearer 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',
                 }
             })
                 .then(response => {

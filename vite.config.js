@@ -7,6 +7,9 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   base:'/ChatGPT-Web/',
+  server: {
+    host: '0.0.0.0'
+  },
   build:{
   },
   // publicPath: process.env.NODE_ENV === "production" ? "/ChatGPT-Web/prod" : "/",
